@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aurora Coffee — Cafés especiais e padaria de manhã cedo</title>
+  <meta name="description" content="Aurora Coffee: cafeteria de cafés especiais brasileiros, torra própria e padaria artesanal na Vila Madalena. Veja o cardápio e faça seu pedido para retirada.">
+  <meta name="theme-color" content="#1E1512">
+  <meta property="og:title" content="Aurora Coffee">
+  <meta property="og:description" content="Cafés especiais, torra própria e padaria artesanal. Aberto a partir das 7h.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Aurora Coffee — início">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M10 28a10 10 0 0 1 20 0" fill="none" stroke="currentColor" stroke-width="2.4"/>
+          <path d="M5 28h30" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M20 9v4M9.4 13.4l2.8 2.8M30.6 13.4l-2.8 2.8" stroke="var(--dawn)" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M11 33h18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">Aurora <em>Coffee</em></span>
+      </a>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Principal" data-nav>
+        <ul>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#origens">Origens</a></li>
+          <li><a href="#casa">A casa</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#visite">Visite</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-small btn-primary order-trigger" type="button" data-open-order aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M6 7h12l-1 13H7L6 7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          <span>Pedido</span>
+          <span class="badge" data-cart-count hidden>0</span>
+        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-nav-toggle>
+          <span class="sr-only">Abrir menu</span>
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="status-pill" data-status aria-live="polite">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-status-text>Verificando horário…</span>
+          </p>
+          <h1 id="hero-title">Café de manhã cedo, <em>o dia inteiro.</em></h1>
+          <p class="lead">Cafés especiais brasileiros com torra própria, métodos filtrados feitos sem pressa e uma padaria que sai do forno às 6h30. Na Vila Madalena, desde a primeira luz.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#cardapio">Ver cardápio</a>
+            <button class="btn btn-ghost" type="button" data-open-order>Pedir para retirar</button>
+          </div>
+          <dl class="hero-facts">
+            <div><dt>Torra</dt><dd>Às terças, em lotes de 12 kg</dd></div>
+            <div><dt>Retirada</dt><dd>Pronto em cerca de 15 min</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-media">
+          <figure class="hero-photo hero-photo-main">
+            <img
+              src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=900&q=75&auto=format&fit=crop"
+              srcset="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=600&q=75&auto=format&fit=crop 600w,
+                      https://images.unsplash.com/photo-1541167760496-1628856ab772?w=900&q=75&auto=format&fit=crop 900w,
+                      https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1300&q=75&auto=format&fit=crop 1300w"
+              sizes="(max-width: 860px) 92vw, 46vw"
+              alt="Leite vaporizado sendo despejado em uma xícara de cappuccino, formando desenho de folha"
+              width="900" height="1125" fetchpriority="high">
+          </figure>
+          <figure class="hero-photo hero-photo-small">
+            <img
+              src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&q=70&auto=format&fit=crop"
+              alt="Croissants dourados recém-saídos do forno"
+              width="500" height="500" loading="lazy">
+          </figure>
+          <p class="hero-note" aria-hidden="true">
+            <span>06:30</span> primeira fornada
+          </p>
+        </div>
+      </div>
+      <div class="horizon" aria-hidden="true"></div>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section class="section menu" id="cardapio" aria-labelledby="cardapio-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow"><span>01</span> Cardápio</p>
+          <h2 id="cardapio-title">O que sai do balcão hoje</h2>
+          <p class="section-intro">Preços em reais, por unidade. Leites vegetais de aveia ou amêndoa sem custo adicional. Toque em <strong>Adicionar</strong> para montar um pedido de retirada.</p>
+        </header>
+
+        <div class="menu-tabs" role="tablist" aria-label="Categorias do cardápio" data-menu-tabs></div>
+
+        <div class="menu-panels" data-menu-panels></div>
+      </div>
+    </section>
+
+    <!-- ORIGENS -->
+    <section class="section origins" id="origens" aria-labelledby="origens-title">
+      <div class="container">
+        <header class="section-head section-head-light">
+          <p class="eyebrow"><span>02</span> Origens</p>
+          <h2 id="origens-title">Do grão à xícara, em três etapas que dá para acompanhar</h2>
+        </header>
+
+        <ol class="process">
+          <li class="process-step">
+            <figure>
+              <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=70&auto=format&fit=crop"
+                   alt="Grãos de café torrados vistos de perto" width="800" height="600" loading="lazy">
+            </figure>
+            <div class="process-text">
+              <span class="process-num">I</span>
+              <h3>Grão</h3>
+              <p>Compramos lotes pequenos de cafés arábica de Minas Gerais e São Paulo — Mantiqueira, Cerrado e Alta Mogiana. Cada saca chega com a ficha do produtor e da colheita.</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <figure>
+              <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=70&auto=format&fit=crop"
+                   alt="Grãos verdes, moídos e café pronto dispostos sobre uma tábua de madeira" width="800" height="600" loading="lazy">
+            </figure>
+            <div class="process-text">
+              <span class="process-num">II</span>
+              <h3>Torra</h3>
+              <p>Torramos às terças, nos fundos da loja, em lotes de 12 kg. Perfis médios, que preservam a doçura e a acidez de cada origem. Você pode assistir pelo vidro.</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <figure>
+              <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=70&auto=format&fit=crop"
+                   alt="Barista preparando café coado em funis de vidro com chaleira de bico fino" width="800" height="600" loading="lazy">
+            </figure>
+            <div class="process-text">
+              <span class="process-num">III</span>
+              <h3>Xícara</h3>
+              <p>Moemos na hora, pesamos cada dose e ajustamos a receita conforme os dias de descanso do grão. O resultado muda um pouco a cada semana — e esse é o ponto.</p>
+            </div>
+          </li>
+        </ol>
+
+        <aside class="beans-card" aria-labelledby="graos-title">
+          <div>
+            <h3 id="graos-title">Grãos para levar</h3>
+            <p>Pacotes de 250 g, moídos na hora para o seu método ou em grãos. Pergunte no balcão qual origem está na moenda esta semana.</p>
+          </div>
+          <p class="beans-price"><span class="price">R$ 54</span><span class="muted">a partir de, 250 g</span></p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- A CASA -->
+    <section class="section house" id="casa" aria-labelledby="casa-title">
+      <div class="container house-grid">
+        <header class="section-head">
+          <p class="eyebrow"><span>03</span> A casa</p>
+          <h2 id="casa-title">Mesas compridas, luz do leste e tomada perto de todo lugar</h2>
+          <p class="section-intro">Uma casa de esquina com janelas para o nascente — daí o nome. São 48 lugares no salão e 12 no quintal, Wi-Fi aberto e uma regra só: o balcão da janela é para quem está sem notebook.</p>
+          <ul class="amenities">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M3 9a13 13 0 0 1 18 0M6 12.5a8.5 8.5 0 0 1 12 0M9 16a4 4 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></svg>Wi-Fi gratuito</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M12 3v5M7 8h10v4a5 5 0 0 1-10 0V8ZM12 17v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Tomadas nas mesas</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 20c0-5 3-8 7-8s7 3 7 8M12 12V4M9 7l3-3 3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Quintal com plantas</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><circle cx="12" cy="5" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v6h5l2 6M12 11H8a5 5 0 1 0 6 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Entrada acessível</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M6 14c-2 0-3-1.5-3-3 2 0 3 1 3 3Zm0 0v3a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3v-3H6ZM18 14l2-4M13 9a2 2 0 1 0-4 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Pets bem-vindos no quintal</li>
+          </ul>
+        </header>
+
+        <div class="gallery">
+          <figure class="g-a">
+            <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=900&q=70&auto=format&fit=crop"
+                 alt="Balcão de cafeteria com luminárias pendentes e prateleiras com louças" width="900" height="700" loading="lazy">
+          </figure>
+          <figure class="g-b">
+            <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=700&q=70&auto=format&fit=crop"
+                 alt="Área com plantas e mesas sob iluminação natural" width="700" height="700" loading="lazy">
+          </figure>
+          <figure class="g-c">
+            <img src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=700&q=70&auto=format&fit=crop"
+                 alt="Copo de café sobre mesa clara com sombras de folhas da luz da manhã" width="700" height="700" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENDA -->
+    <section class="section agenda" id="agenda" aria-labelledby="agenda-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow"><span>04</span> Agenda</p>
+          <h2 id="agenda-title">Encontros em volta da mesa</h2>
+          <p class="section-intro">Vagas limitadas. Garanta a sua pelo formulário abaixo; a confirmação chega por e-mail.</p>
+        </header>
+
+        <ul class="events" data-events>
+          <li class="event">
+            <p class="event-date"><span class="event-day">Sáb</span><span class="event-time">10h</span></p>
+            <div class="event-body">
+              <h3>Cupping aberto</h3>
+              <p>Prova comparativa de três origens da semana. Para curiosos e profissionais. 1h, gratuito.</p>
+            </div>
+            <p class="event-meta">Toda semana</p>
+          </li>
+          <li class="event">
+            <p class="event-date"><span class="event-day">Qua</span><span class="event-time">19h30</span></p>
+            <div class="event-body">
+              <h3>Oficina de métodos filtrados</h3>
+              <p>V60, Chemex e prensa francesa: moagem, proporção e tempo para acertar em casa. 2h, inclui 100 g de café.</p>
+            </div>
+            <p class="event-meta">R$ 120 · 1ª quarta do mês</p>
+          </li>
+          <li class="event">
+            <p class="event-date"><span class="event-day">Dom</span><span class="event-time">8h</span></p>
+            <div class="event-body">
+              <h3>Café com fornada</h3>
+              <p>Acompanhe o padeiro na última fornada da semana e leve um pão de fermentação natural.</p>
+            </div>
+            <p class="event-meta">R$ 45 · último domingo</p>
+          </li>
+        </ul>
+
+        <form class="signup" novalidate data-signup>
+          <h3 class="signup-title">Reservar vaga</h3>
+          <div class="field">
+            <label for="ev-event">Encontro</label>
+            <select id="ev-event" name="event" required>
+              <option value="">Escolha um encontro</option>
+              <option>Cupping aberto</option>
+              <option>Oficina de métodos filtrados</option>
+              <option>Café com fornada</option>
+            </select>
+            <p class="field-error" id="ev-event-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="ev-email">E-mail</label>
+            <input id="ev-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="voce@email.com" required>
+            <p class="field-error" id="ev-email-error" hidden></p>
+          </div>
+          <button class="btn btn-primary" type="submit">Reservar</button>
+          <p class="form-status" role="status" data-signup-status></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- VISITE -->
+    <section class="section visit" id="visite" aria-labelledby="visite-title">
+      <div class="container visit-grid">
+        <div class="visit-info">
+          <p class="eyebrow"><span>05</span> Visite</p>
+          <h2 id="visite-title">Rua das Acácias, 214</h2>
+          <address>
+            Vila Madalena · São Paulo, SP<br>
+            A 6 minutos a pé da estação Vila Madalena (Linha 2-Verde)
+          </address>
+
+          <table class="hours" aria-label="Horário de funcionamento">
+            <tbody data-hours></tbody>
+          </table>
+
+          <div class="visit-actions">
+            <a class="btn btn-primary" href="https://www.openstreetmap.org/search?query=Vila%20Madalena%2C%20S%C3%A3o%20Paulo" target="_blank" rel="noopener">Como chegar <span class="sr-only">(abre em nova aba)</span></a>
+            <a class="btn btn-ghost" href="tel:+551130000000">(11) 3000-0000</a>
+          </div>
+        </div>
+
+        <div class="visit-map" aria-hidden="true">
+          <svg viewBox="0 0 480 400" class="map-svg">
+            <rect width="480" height="400" fill="var(--map-bg)"/>
+            <g stroke="var(--map-road)" stroke-linecap="round" fill="none">
+              <path d="M-10 120 L490 60" stroke-width="22"/>
+              <path d="M-10 300 L490 250" stroke-width="16"/>
+              <path d="M140 -10 L200 410" stroke-width="18"/>
+              <path d="M340 -10 L310 410" stroke-width="14"/>
+              <path d="M200 160 Q 270 150 330 190" stroke-width="10"/>
+            </g>
+            <g fill="var(--map-block)">
+              <rect x="20" y="150" width="100" height="120" rx="6"/>
+              <rect x="215" y="200" width="80" height="40" rx="6"/>
+              <rect x="360" y="110" width="100" height="120" rx="6"/>
+              <rect x="20" y="20" width="100" height="70" rx="6"/>
+              <rect x="215" y="300" width="80" height="90" rx="6"/>
+            </g>
+            <circle cx="420" cy="330" r="36" fill="var(--map-park)"/>
+            <g font-family="Manrope, sans-serif" font-size="12" font-weight="600" fill="var(--ink-soft)">
+              <text x="30" y="108" transform="rotate(-6.8 30 108)">R. das Acácias</text>
+              <text x="177" y="254" text-anchor="middle" transform="rotate(81.9 177 254)">R. Harmonia</text>
+              <text x="378" y="350">Praça</text>
+            </g>
+            <g transform="translate(205 108)">
+              <circle r="30" fill="var(--dawn)" opacity=".25"/>
+              <path d="M0 6 C -14 -8 -14 -26 0 -26 C 14 -26 14 -8 0 6 Z" fill="var(--accent)"/>
+              <circle cy="-15" r="5" fill="var(--paper)"/>
+            </g>
+            <g transform="translate(250 120)">
+              <rect width="124" height="30" rx="15" fill="var(--ink)"/>
+              <text x="62" y="20" text-anchor="middle" font-family="Manrope, sans-serif" font-size="13" font-weight="700" fill="var(--paper)">Aurora Coffee</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Aurora <em>Coffee</em></p>
+        <p class="muted">Cafés especiais, torra própria e padaria artesanal.</p>
+      </div>
+      <div>
+        <h2 class="footer-title">Contato</h2>
+        <ul class="footer-list">
+          <li><a href="mailto:ola@auroracoffee.com.br">ola@auroracoffee.com.br</a></li>
+          <li><a href="tel:+551130000000">(11) 3000-0000</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-title">Navegar</h2>
+        <ul class="footer-list">
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#origens">Origens</a></li>
+          <li><a href="#visite">Horários e endereço</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> Aurora Coffee. Marca fictícia criada para demonstração; endereço e telefone são exemplos.</p>
+      <p>Fotos: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></p>
+    </div>
+  </footer>
+
+  <!-- PEDIDO -->
+  <dialog class="order" aria-labelledby="order-title" data-order>
+    <div class="order-inner">
+      <header class="order-head">
+        <h2 id="order-title">Seu pedido para retirada</h2>
+        <button class="icon-btn" type="button" data-close-order aria-label="Fechar pedido">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </header>
+
+      <div class="order-body" data-order-body>
+        <div class="order-empty" data-order-empty>
+          <svg viewBox="0 0 64 64" aria-hidden="true" class="empty-cup"><path d="M14 26h30v12a15 15 0 0 1-30 0V26Z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M44 30h4a6 6 0 0 1 0 12h-4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M22 18c0-3 3-3 3-6M30 18c0-3 3-3 3-6" fill="none" stroke="var(--dawn)" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <p><strong>Nenhum item ainda.</strong></p>
+          <p class="muted">Escolha algo no cardápio e toque em Adicionar.</p>
+          <a class="btn btn-primary" href="#cardapio" data-close-order>Ver cardápio</a>
+        </div>
+
+        <ul class="cart-list" data-cart-list></ul>
+
+        <form class="order-form" novalidate data-order-form hidden>
+          <div class="cart-total">
+            <span>Total</span>
+            <strong data-cart-total>R$ 0,00</strong>
+          </div>
+          <p class="pay-note">Pagamento no balcão, na retirada (Pix, cartão ou dinheiro).</p>
+
+          <div class="field">
+            <label for="o-name">Nome para chamar</label>
+            <input id="o-name" name="name" autocomplete="given-name" required maxlength="40">
+            <p class="field-error" id="o-name-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="o-phone">Celular <span class="muted">(para avisar quando estiver pronto)</span></label>
+            <input id="o-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 90000-0000" required>
+            <p class="field-error" id="o-phone-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="o-time">Horário de retirada</label>
+            <select id="o-time" name="time" required data-pickup></select>
+            <p class="field-hint" data-pickup-hint></p>
+            <p class="field-error" id="o-time-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="o-notes">Observações <span class="muted">(opcional)</span></label>
+            <textarea id="o-notes" name="notes" rows="2" maxlength="200" placeholder="Ex.: leite de aveia no cappuccino"></textarea>
+          </div>
+
+          <button class="btn btn-primary btn-block" type="submit" data-order-submit>Confirmar pedido</button>
+          <p class="form-status form-status-error" role="alert" data-order-error></p>
+          <p class="demo-note">Demonstração: este site ainda não está conectado a um sistema de pedidos. Nada é enviado à loja.</p>
+        </form>
+
+        <div class="order-done" data-order-done hidden tabindex="-1">
+          <p class="done-code" data-done-code></p>
+          <h3>Pedido registrado (simulação)</h3>
+          <p data-done-text></p>
+          <button class="btn btn-ghost" type="button" data-close-order>Fechar</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
